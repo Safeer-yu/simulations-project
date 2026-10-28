@@ -1,0 +1,19 @@
+## Encoding Dimensions
+
+Some words in this dataset are longer than 10 letters. Therefore, the maximum word length was increased from **10 to 14 letters**.
+
+Using an alphabet of **35 Arabic letters**, the encoding dimensions are:
+
+- **One-hot encoding:** 35 × 14 = **490 dimensions**
+- **Identity encoding:** **35 dimensions**
+- **Position encoding:** 14 × 14 = **196 dimensions**
+- **Allograph encoding:** **116 dimensions**
+
+Words shorter than 14 letters are zero-padded to maintain consistent vector lengths.
+
+### Required Network Changes
+
+- Change the **one-hot output size** from **350 to 490**.
+- Change the **position input size** from **100 to 196**.
+- The **identity input size** remains **35**.
+- The **allograph input size** remains **116**.

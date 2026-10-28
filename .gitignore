@@ -1,0 +1,6 @@
+notes.txt
+tests/
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+supporting/Old_All_simulations/
